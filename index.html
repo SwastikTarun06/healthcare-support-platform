@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Healthcare Access</title>
+
+    <!-- This is CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- This is Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="light-mode">
+
+    <!-- This is the navigation bar-->
+    <nav class="navbar">
+    <button id="backToHomeBtn" class="back-home-btn">← Back to Home</button>
+
+    <h1 class="navbar-title">Haven Healthcare</h1>
+
+    <div class="nav-controls">
+        <select id="languageSelect">
+            <option value="en">EN</option>
+            <option value="ar">AR</option>
+            <option value="es">ES</option>
+        </select>
+
+        <button id="darkToggle" class="mode-toggle">🌙 Dark Mode</button>
+    </div>
+    </nav>
+
+    <!-- This is the Emergency Banner -->
+    <div id="emergencyBanner" class="emergency-banner">
+        🚨 Emergency? Call 999 or go to your nearest A&E immediately.
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Nearby Healthcare Centres</h2>
+
+        <!-- This is the Search and Filters -->
+        <div class="search-row">
+            <input id="searchInput" type="text" placeholder="Search clinics..." />
+            <button id="filterBtn">Open Now Only</button>
+            <button id="categoryBtn">+ Categories</button>
+        </div>
+
+        <div id="categoryPopup"></div>
+
+        <!-- This is the Clinic List -->
+        <div id="clinicList" class="clinic-list"></div>
+
+        <!-- This is the Map -->
+        <h2 class="section-title map-title">Map</h2>
+        <div class="map-wrapper">
+            <div id="cityMap"></div>
+        </div>
+
+        <!-- These are the Health Tips -->
+        <h2 class="section-title">Helpful Healthcare Tips</h2>
+        <div id="tipsContainer" class="tips-grid"></div>
+
+        <!-- These are the NHS Helpful Links -->
+        <h2 class="section-title">NHS Helpful Links</h2>
+        <div class="nhs-links" id="nhsLinks">
+            <a href="https://111.nhs.uk/" target="_blank" rel="noopener">NHS 111</a>
+            <a href="https://www.nhs.uk/nhs-services/gps/how-to-register-with-a-gp-surgery/" target="_blank" rel="noopener">NHS GP Registration</a>
+            <a href="https://www.nhs.uk/service-search" target="_blank" rel="noopener">Uxbridge NHS facilities (service search)</a>
+        </div>
+
+        <!-- This is the Emergency Checklist -->
+        <h2 class="section-title">Emergency Checklist</h2>
+        <div class="emergency-checklist" id="emergencyChecklist">
+            <h3>When to call 999</h3>
+            <ul>
+                <li>Unconsciousness or not breathing</li>
+                <li>Severe chest pain</li>
+                <li>Severe bleeding that won't stop</li>
+            </ul>
+
+            <h3>When to go to A&E</h3>
+            <ul>
+                <li>Major injuries, suspected broken bones</li>
+                <li>Severe head injury or suspected stroke</li>
+            </ul>
+
+            <h3>When a clinic is enough</h3>
+            <ul>
+                <li>Minor wounds, infections, colds, vaccinations</li>
+                <li>Medication refills and routine checks</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

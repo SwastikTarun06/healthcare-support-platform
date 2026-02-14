@@ -1,0 +1,351 @@
+/* GENERAL: controls the styling for the whole page*/
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    transition: background 0.4s, color 0.4s;
+}
+
+.light-mode {
+    background: #f5f5f5;
+    color: #222;
+}
+
+.dark-mode {
+    background: #111;
+    color: #f5f5f5;
+}
+
+/* NAVBAR: Styles the navigation bar at the top*/
+.navbar {
+    background: #2563eb;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Back to Home button */
+.back-home-btn {
+    background: white;
+    color: #2563eb;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Moves title to the centre */
+.navbar-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* Keeps the navbar layout clean */
+.navbar {
+    position: relative;
+}
+
+.nav-controls select {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.mode-toggle {
+    background: white;
+    color: #2563eb;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* EMERGENCY: Styling for the red emergency box */
+.emergency-banner {
+    background: #ef4444;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* PAGE LAYOUT: This controls the overall layout of content */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section-title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* SEARCH + FILTER: Controls the layout and styling of the search bar, filter buttons, and spacing */
+.search-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.search-row input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+#filterBtn, #categoryBtn {
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* CATEGORY FILTER POPUP: The poplist that appears when you press Categories*/
+#categoryPopup {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 50;
+}
+
+#categoryPopup label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* CLINIC CARDS: This controls the layout and appearance of each clinic card */
+.clinic-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 12px;
+    transition: transform 0.3s, background 0.3s;
+    overflow: hidden;
+}
+
+.dark-mode .clinic-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+.clinic-card:hover {
+    transform: scale(1.01);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-info {
+    margin-top: 10px;
+    background: #dbeafe;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.dark-mode .more-info {
+    background: #1e3a8a;
+    color: #bfdbfe;
+}
+
+.more-info.expanded {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.clinic-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    background: #e6f0ff;
+    color: #0a3b8a;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.badge.lowcost {
+    background: #fff7e6;
+    color: #8a5a00;
+}
+
+.badge.free {
+    background: #e6ffef;
+    color: #056b2f;
+    font-weight: 700;
+}
+
+/* Busy level small dot + label: Shows how busy the clinic is */
+.busy-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.busy-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Rating: Shows the reviews*/
+.rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+/* Services icons: Shows the service emojis*/
+.services {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    font-size: 18px;
+}
+
+/* Small buttons */
+.small-btn {
+    background: #2563eb;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 6px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Buttons area: Used for Card actions */
+.card-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* MAP: Controls how the map container works */
+.map-wrapper {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    position: relative;
+    margin-top: 15px;
+}
+
+#cityMap {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* TIPS: This contorls the layout and appearnace of the health tips */
+.tips-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.tip-card {
+    background: white;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.tip-card:hover {
+    transform: scale(1.03);
+}
+
+.dark-mode .tip-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+/* NHS links and emergency checklist */
+.nhs-links {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nhs-links a {
+    color: #0b5ed7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.emergency-checklist {
+    margin-top: 18px;
+    border: 1px dashed #ddd;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff8f8;
+}
+
+.dark-mode .emergency-checklist {
+    background: #1f2937;
+    border-color: #374151;
+    color: #fff;
+}
+
+/* FADE ANIMATION: The animation when clinic cards appear*/
+.fade-in {
+    animation: fade 0.7s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    to { opacity: 1; }
+}
+
+/* Accessibility tweaks */
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
