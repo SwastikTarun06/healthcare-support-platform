@@ -21,3 +21,20 @@ This project is a front-end healthcare support web platform developed as part of
 - UI/UX design and accessibility considerations  
 - Integration of external libraries  
 - Structured debugging and iterative testing
+
+## Screenshots
+
+### Homepage
+![Homepage](homepage.png)
+
+### Clinic Cards & Filters
+![Clinic Cards](clinic-cards.png)
+
+### Search Filter
+![Search Filter](search-filter.png)
+
+### Interactive Map
+![Map](map.png)
+
+### Dark Mode
+![Dark Mode](dark-mode.png)
